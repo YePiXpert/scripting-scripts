@@ -1,0 +1,17 @@
+title = "Public source secret checks"
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Reviewed synthetic fixture, schema hash or public protocol constant; exact value only"
+condition = "AND"
+regexTarget = "match"
+paths = ["^tests/GridBill/protocol\\.test\\.cjs$"]
+regexes = ["^params\\.quInfo\\.password, 'dfb450efddbb5387197c84460623675b'$"]
+
+[[allowlists]]
+description = "Reviewed synthetic fixture, schema hash or public protocol constant; exact value only"
+condition = "AND"
+regexTarget = "match"
+paths = ["^scripts/GridBill/lib/protocol/client\\.ts$"]
+regexes = ["^clientPrivateKey: '50C4AF48DF75808050729977AA6BC127DC21A404755C660B94222F9D50FA4A75'$"]
