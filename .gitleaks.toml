@@ -1,8 +1,10 @@
 title = "Public source secret checks"
+minVersion = "v8.25.0"
 [extend]
 useDefault = true
 
 [[allowlists]]
+targetRules = ["generic-api-key"]
 description = "Reviewed synthetic fixture, schema hash or public protocol constant; exact value only"
 condition = "AND"
 regexTarget = "match"
@@ -10,6 +12,7 @@ paths = ["^tests/GridBill/protocol\\.test\\.cjs$"]
 regexes = ["^params\\.quInfo\\.password, 'dfb450efddbb5387197c84460623675b'$"]
 
 [[allowlists]]
+targetRules = ["generic-api-key"]
 description = "Reviewed synthetic fixture, schema hash or public protocol constant; exact value only"
 condition = "AND"
 regexTarget = "match"
